@@ -201,25 +201,26 @@ img {
 
 @keyframes drop {
   0% {
-    top: 350px;
+    top: 220px;
   }
 
   35% {
-    top: 365px;
+    top: 280px;
   }
 
-  55% {
-    top: 390px;
+  50% {
+    top: 300px;
   }
 
   100% {
-    top: 444px;
+    top: 374px;
   }
 }
 
 .daddy:hover .drop {
   position: absolute;
-  left: calc(48% - 8.3px);
+  left: calc(47% - 1.8px);
+  
   top: 380px;
   width: 50px;
   height: 50px;
