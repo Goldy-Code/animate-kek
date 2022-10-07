@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+@keyframes frog {
+  0% {
+    left: 0%;
+    top: 0%;
+  }
+  25% {
+    left: calc(100% - 100px);
+    top: 0;
+  }
+  50% {
+    left: calc(100% - 100px);
+    top: calc(100% - 105px);
+  }
+  75% {
+    left: 0;
+    top: calc(100% - 105px);
+  }
+
+  100% {
+    left: 0%;
+    top: 0%;
+  }
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  animation-name: frog;
+  animation-duration: 10s;
+  /* animation-delay: -2s; */
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  position: relative;
+  width: 220px;
+  height: 180px;
+  background-color: steelblue;
+  overflow: hidden;
+}
+
+.press1 {
+  position: absolute;
+  left: -250px;
+
+  width: 220px;
+  height: 180px;
+  background-color: snow;
+}
+.zub1 {
+  position: absolute;
+  right: -13px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(135deg);
+}
+.zub2 {
+  position: absolute;
+  right: -13px;
+  top: 60px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(135deg);
+}
+.zub3 {
+  position: absolute;
+  right: -13px;
+  top: 120px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(135deg);
+}
+.press2 {
+  position: absolute;
+  left: 250px;
+
+  width: 220px;
+  height: 180px;
+  background-color: snow;
+}
+.zub11 {
+  position: absolute;
+  left: -13px;
+  top: -30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(-45deg);
+}
+.zub22 {
+  position: absolute;
+  left: -13px;
+  top: 30px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(-45deg);
+}
+.zub33 {
+  position: absolute;
+  left: -13px;
+  top: 90px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(-45deg);
+}
+.zub44 {
+  position: absolute;
+  left: -13px;
+  top: 150px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 0 100% 100%;
+  background-color: snow;
+  transform: rotate(-45deg);
+}
+
+@keyframes press1 {
+  0% {
+    left: -250px;
+  }
+
+  35% {
+    left: -170px;
+  }
+
+  50% {
+    left: -180px;
+  }
+
+  100% {
+    left: -130px;
+  }
+}
+
+.container:hover .press1 {
+  animation-name: press1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes press2 {
+  0% {
+    left: 250px;
+  }
+
+  35% {
+    left: 170px;
+  }
+
+  50% {
+    left: 180px;
+  }
+
+  100% {
+    left: 130px;
+  }
+}
+
+.container:hover .press2 {
+  animation-name: press2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes drop {
+  0% {
+    top: 350px;
+  }
+
+  35% {
+    top: 365px;
+  }
+
+  55% {
+    top: 390px;
+  }
+
+  100% {
+    top: 444px;
+  }
+}
+
+.daddy:hover .drop {
+  position: absolute;
+  left: calc(48% - 8.3px);
+  top: 380px;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 100% 100%;
+  background-color: steelblue;
+  transform: rotate(45deg);
+  animation-iteration-count: infinite;
+
+  animation-name: drop;
+  animation-duration: 4s;
+}
